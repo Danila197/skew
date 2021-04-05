@@ -28,21 +28,42 @@ body {
 .goods::before {
 	content: "";
 	position: absolute;
-	top: 1px;
+	top: 0px;
 	left: 0;
 	display: block;
 	width: 100%;
-	min-height: 100px;
+	min-height: 108px;
 	background-image: url("../img/toptri.svg");
 	background-color: #fff;
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-position: center 1px;
+	background-position: center right -49px;
 }
 .container-big {
 	max-width: 1940px;
 	padding: 0 20px;
 	margin: 0 auto;
+	position: relative;
+}
+.goods__elem-1 {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	width: 0;
+	height: 0;
+	border-top: 262px solid transparent;
+	border-left: 262px solid #64534d;
+	border-bottom: 262px solid transparent;
+}
+.goods__elem-2 {
+	position: absolute;
+	top: 50%;
+	right: 0;
+	transform: translateY(-50%);
+	width: 68px;
+	height: 268px;
+	background-color: #64534d;
 }
 .goods__title {
 	color: #f8ede1;
