@@ -25,7 +25,7 @@ body {
 	padding: 99px 0 86px;
 	position: relative;
 }
-.goods::before {
+/* .goods::before {
 	content: "";
 	position: absolute;
 	top: 0px;
@@ -38,32 +38,12 @@ body {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center right -49px;
-}
+} */
 .container-big {
 	max-width: 1940px;
 	padding: 0 20px;
 	margin: 0 auto;
 	position: relative;
-}
-.goods__elem-1 {
-	position: absolute;
-	top: 50%;
-	left: 0;
-	transform: translateY(-50%);
-	width: 0;
-	height: 0;
-	border-top: 262px solid transparent;
-	border-left: 262px solid #64534d;
-	border-bottom: 262px solid transparent;
-}
-.goods__elem-2 {
-	position: absolute;
-	top: 50%;
-	right: 0;
-	transform: translateY(-50%);
-	width: 68px;
-	height: 268px;
-	background-color: #64534d;
 }
 .goods__title {
 	color: #f8ede1;
@@ -72,38 +52,28 @@ body {
 }
 .section-title {
 	font-family: Roboto, sans-serif;
-	font-size: 46px;
+	font-size: 36px;
 }
 .container-small {
 	max-width: 1144px;
 	padding: 0 10px;
 	margin: 0 auto;
 }
-.goods__wrapper {
-	margin-bottom: 30px;
-}
-.goods-items {
-	display: grid;
-	grid-template-columns: 41% 1fr 1fr;
-	grid-template-rows: 280px 280px;
-	gap: 30px 30px;
-}
-
 .goods-item {
 	overflow: hidden;
 	position: relative;
 }
-.goods-item:nth-child(1) {
-	grid-column: span 1;
-	grid-row: span 2;
+.goods__wrapper {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-row-gap: 30px;
 }
+
 .goods-item__img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
 	object-position: center;
-}
-.goods-item__box {
 }
 .goods-box {
 	position: absolute;
@@ -118,7 +88,7 @@ body {
 	flex-direction: column;
 	padding: 50px;
 	transition: transform 0.5s ease-in;
-	transform: translateY(-100%);
+	transform: translateY(-150%);
 }
 .goods-item::before {
 	position: absolute;
@@ -145,51 +115,104 @@ body {
 }
 .goods-box__title-big {
 	margin-right: auto;
-	font-size: 40px;
-	margin-bottom: 29px;
+	font-size: 20px;
+	margin-bottom: 20px;
 }
 .goods-box__text {
 	font-weight: 300;
-	font-size: 26px;
-	line-height: 30px;
-	margin-bottom: 26px;
+	font-size: 14px;
+	line-height: 20px;
+	margin-bottom: 16px;
 }
 .goods-box__button {
 	margin-right: auto;
 	padding: 10px 25px;
+	font-size: 12px;
 }
 .btn {
 	display: inline-block;
 	border: none;
 	font-family: Roboto, sans-serif;
 	font-weight: 600;
-	font-size: 22px;
 	text-transform: uppercase;
 	color: #f8ede1;
 	background: #64534d;
-}
-.goods-button {
-	background-image: url(../img/arrow.svg);
-	background-repeat: no-repeat;
-	background-position: center bottom;
-	max-width: 678px;
-	height: 43px;
-	background-color: #f8ede1;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	position: relative;
 	cursor: pointer;
 }
-.goods-button::after {
-	position: absolute;
-	display: block;
-	content: "";
-	width: 100%;
-	height: 23px;
-	border-left: calc(678px / 2) solid transparent;
-	border-right: calc(678px / 2) solid transparent;
-	border-top: 23px solid #f8ede1;
-	bottom: -23px;
-	left: 0;
+@media (min-width: 576px) {
+	.goods-box__button {
+		padding: 10px 25px;
+		font-size: 22px;
+	}
+	.goods-box__text {
+		font-size: 26px;
+		line-height: 30px;
+		margin-bottom: 26px;
+	}
+	.goods-box__title-big {
+		font-size: 40px;
+		margin-bottom: 29px;
+	}
+	.section-title {
+		font-size: 46px;
+	}
+	.goods__wrapper {
+		margin-bottom: 30px;
+		grid-template-columns: 41% 1fr 1fr;
+		grid-template-rows: 280px 280px;
+		gap: 30px 30px;
+	}
+
+	.goods-item:nth-child(1) {
+		grid-column: span 1;
+		grid-row: span 2;
+	}
+}
+@media (min-width: 768px) {
+	.goods__elem-1 {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+		width: 0;
+		height: 0;
+		border-top: 262px solid transparent;
+		border-left: 262px solid #64534d;
+		border-bottom: 262px solid transparent;
+	}
+	.goods__elem-2 {
+		position: absolute;
+		top: 50%;
+		right: 0;
+		transform: translateY(-50%);
+		width: 68px;
+		height: 268px;
+		background-color: #64534d;
+	}
+	.goods-button {
+		background-image: url(../img/arrow.svg);
+		background-repeat: no-repeat;
+		background-position: center bottom;
+		max-width: 678px;
+		height: 43px;
+		background-color: #f8ede1;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+		cursor: pointer;
+	}
+
+	.goods-button::after {
+		position: absolute;
+		display: block;
+		content: "";
+		width: 100%;
+		height: 23px;
+		border-left: calc(678px / 2) solid transparent;
+		border-right: calc(678px / 2) solid transparent;
+		border-top: 23px solid #f8ede1;
+		bottom: -23px;
+		left: 0;
+	}
 }
