@@ -135,8 +135,9 @@ body {
 	font-weight: 600;
 	text-transform: uppercase;
 	color: #f8ede1;
-	background: #64534d;
+	background-color: #64534d;
 	cursor: pointer;
+	transition: background-color 0.3s ease-in, box-shadow 0.3s ease-in;
 }
 .contact__wrapper {
 	grid-template-columns: 1fr;
@@ -297,6 +298,7 @@ body {
 		justify-content: center;
 		position: relative;
 		cursor: pointer;
+		transition: background-color 0.3s ease-in;
 	}
 
 	.goods-button::after {
@@ -310,6 +312,19 @@ body {
 		border-top: 23px solid #f8ede1;
 		bottom: -23px;
 		left: 0;
+		transition: border-top 0.3s ease-in;
+	}
+}
+@media (min-width: 992px) {
+	.btn:hover {
+		background-color: #3f3531;
+		box-shadow: 0px 0px 15px #3f3531c5;
+	}
+	.goods-button:hover {
+		background-color: #64534d;
+	}
+	.goods-button:hover::after {
+		border-top: 23px solid #64534d;
 	}
 }
 @media (min-width: 1100px) {
